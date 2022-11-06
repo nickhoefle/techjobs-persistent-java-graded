@@ -1,5 +1,9 @@
 -- Part 1: Test it with SQL
 
+SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS
+WHERE table_name = 'job'
+
+
 -- Part 2: Test it with SQL
 
 -- Part 3: Test it with SQL
