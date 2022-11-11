@@ -1,6 +1,7 @@
 package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,6 @@ public class Job extends AbstractEntity {
 
     public Job() {}
     public Job(Employer anEmployer, List<Skill> skills) {
-        super();
         this.skills = skills;
         this.employer = anEmployer;
 
@@ -37,4 +37,5 @@ public class Job extends AbstractEntity {
     public void setSkills(List<Skill> skills) {
         this.skills = skills;
     }
+
 }
