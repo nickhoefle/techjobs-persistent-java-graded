@@ -15,3 +15,16 @@ WHERE location = "St. Louis City";
 DROP TABLE job;
 
 -- Part 4: Test it with SQL
+
+SELECT *
+FROM skill
+LEFT JOIN job_skills
+ON job_skills.skills_id = skill.id
+ORDER BY name ASC;
+
+--SELECT
+--DISTINCT name
+--FROM job_skills
+--LEFT OUTER JOIN skill
+--ON job_skills.skills_id = skill.id
+--ORDER BY name ASC;
