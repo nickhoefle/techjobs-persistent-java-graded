@@ -32,12 +32,11 @@ public class ListController {
     static HashMap<String, String> columnChoices = new HashMap<>();
 
     public ListController () {
-
         columnChoices.put("all", "All");
         columnChoices.put("employer", "Employer");
         columnChoices.put("skill", "Skill");
-
     }
+
 
     @RequestMapping("")
     public String list(Model model) {
@@ -45,6 +44,7 @@ public class ListController {
         model.addAttribute("skills", skillRepository.findAll());
         return "list";
     }
+
 
     @RequestMapping(value = "jobs")
     public String listJobsByColumnAndValue(Model model, @RequestParam String column, @RequestParam String value) {
@@ -57,7 +57,6 @@ public class ListController {
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
         }
         model.addAttribute("jobs", jobs);
-
         return "list-jobs";
     }
 }

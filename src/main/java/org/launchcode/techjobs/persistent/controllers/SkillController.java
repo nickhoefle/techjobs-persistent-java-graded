@@ -26,12 +26,14 @@ public class SkillController {
         return "skills/index";
     }
 
+
     @GetMapping("add")
     public String displayAddSkillForm (Model model, Skill newSkill) {
         model.addAttribute(new Skill());
         model.addAttribute("skills", skillRepository.findAll());
         return "skills/add";
     }
+
 
     @PostMapping("add")
     public String processAddSkillForm (@ModelAttribute @Valid Skill newSkill,

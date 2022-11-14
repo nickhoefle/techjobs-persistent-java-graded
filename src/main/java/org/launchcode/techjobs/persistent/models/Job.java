@@ -15,13 +15,12 @@ public class Job extends AbstractEntity {
     private List<Skill> skills = new ArrayList<>();
 
     public Job() {}
+
     public Job(Employer anEmployer, List<Skill> skills) {
         this.skills = skills;
         this.employer = anEmployer;
-
     }
 
-    // Getters and setters.
     public Employer getEmployer() {
         return employer;
     }
